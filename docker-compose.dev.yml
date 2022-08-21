@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    container_name: nodejs-express-boilerplate-development
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      # You will need this for the nodemon
+      - ./:/app
+    env_file: .env
+    ports:
+      - "$PORT:$PORT"
