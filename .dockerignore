@@ -6,3 +6,5 @@ Dockerfile.dev
 .git
 .gitignore
 .npmrc
+.env
+.env-example
