@@ -1,11 +1,21 @@
-FROM node
+FROM node:lts-alpine@sha256:2c405ed42fc0fd6aacbe5730042640450e5ec030bada7617beac88f742b6997b
 
-WORKDIR /app
+RUN mkdir -p /usr/src/app/node_modules && chown -R node:node /usr/src/app
 
-COPY package*.json /
+RUN apk update
 
-RUN npm install
+RUN npm install --global nodemon
 
-COPY ./ ./
+ENV NODE_ENV development
 
-CMD ["npm", "run", "start:dev"]
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
+USER node
+
+RUN npm ci --only=production
+
+COPY --chown=node:node ./ /usr/src/app/
+
+CMD ["nodemon", "./src/index.js"]

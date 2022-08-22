@@ -8,3 +8,6 @@
 - [Using Docker for Node.js in Development and Production](https://dev.to/alex_barashkov/using-docker-for-nodejs-in-development-and-production-3cgp)
 - [Working with docker bind mounts and node_modules](https://burnedikt.com/dockerized-node-development-and-mounting-node-volumes/)
 - [Local Development with Docker Compose](https://devcenter.heroku.com/articles/local-development-with-docker-compose)
+- [Snyk - 10 best practices to containerize Node.js web applications with Docker](https://snyk.io/blog/10-best-practices-to-containerize-nodejs-web-applications-with-docker/)
+- [Snyk - 10 Docker Security Best Practices](https://snyk.io/blog/10-docker-image-security-best-practices/)
+- [Digital Ocean - How To Build a Node.js Application with Docker on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-build-a-node-js-application-with-docker-on-ubuntu-20-04)
